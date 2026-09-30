@@ -279,6 +279,11 @@ FR-017 se conserva para no perder el identificador histórico, pero su estado es
 | ID | Categoría y atributo | Requisito no funcional | Ámbito (Global/Local) | UR/FR relacionados | Método de comprobación | Estado |
 | --- | --- | --- | --- | --- | --- | --- |
 | NFR-07 |NFR-Q (Eficiencia; Escalabilidad; Mantenibilidad) |La plataforma mantendrá los objetivos de capacidad y rendimiento definidos para la primera versión sin intervención manual del personal de la organización.| G | -  | Prueba de carga automatizada con 100 usuarios concurrentes y 10 operaciones/s durante 30 min; comprobar mediante registros de monitorización, ausencia de intervención manual. | - |
+| NFR-01 | NFR-Q (Mantenibilidad) | EL sistema debe realizar al menos una copia de seguridad diaria de la información de salud y recetas | G | - | - | - | 
+| NFR-02 | NFR-R (Implementación) | El sistema debe admitir en su primera versión los idiomas gallego y castellano, por lo que todos los textos de navegación, formularios, validaciones y mensajes de la interfaz se mostrarán íntegramente en el idioma seleccionado | G | - | - | - |
+| NFR-03 | NFR-R | La plataforma se desplegará en una infraestructura en la nube gestionada por un proveedor externo, que se comprobará revisando la arquitectura, la configuración del despliegue, las dependencias del cliente y el acceso desde los navegadores compatibles. | G | - | - | - |
+
+
 
 Categorías y atributos: 
 1) Requisitos de calidad (NFR-Q): Rendimiento, Usabilidad, Seguridad, Fiabilidad, Disponibilidad, Modificabilidad, Portabilidad, Eficiencia, Escalabilidad, Verificabilidad / Testabilidad, Robustez, Seguridad funcional (safety), Integridad, Reusabilidad, Instalabilidad.
