@@ -268,6 +268,17 @@ enlazar a los términos de esta sección, pero no los definirá de nuevo.
 
 | Término | Definición en Proyecto Simbiosis | Fuente |
 | --- | --- | --- |
+| **Usuarios concurrentes** | Cantidad de usuarios que realizan peticiones e interactúan en la plataforma de forma simultánea en un mismo instante. | Párrafos 2.1.1 y 2.1.2 |
+| **Escalado automático** | Capacidad de la infraestructura para incrementar recursos computacionales de manera autónoma ante un aumento de carga, sin intervención manual. | Párrafo 2.1.1 |
+| **Tiempo de respuesta** | Intervalo transcurrido desde que la plataforma recibe una solicitud hasta que devuelve la respuesta completa (excluyendo archivos y servicios externos). | Párrafo 2.1.3 |
+| **Disponibilidad del servicio (SLA)** | Porcentaje mínimo mensual (99,5 %) durante el cual el sistema debe permanecer funcional y accesible desde un control externo. | Párrafos 2.1.4 y 2.1.5 |
+| **RTO (Tiempo Máximo de Recuperación)** | Límite de tiempo (4 horas) desde la declaración de un incidente grave para restaurar las funciones principales de la plataforma. | Párrafo 2.2.1 |
+| **RPO (Pérdida Máxima de Información)** | Ventana temporal máxima de datos (24 horas) que la organización acepta perder en caso de desastre, cubierta mediante copias diarias. | Párrafo 2.2.1 |
+| **OAuth 2.0 / OpenID Connect** | Protocolos de autenticación segura para delegar el inicio de sesión a un proveedor externo (Google) sobre HTTPS sin almacenar contraseñas. | Párrafo 2.3.1 |
+| **WCAG 2.2 Nivel AA** | Estándar internacional de accesibilidad web que exige adaptar diseño y código para personas con discapacidades (teclado, lectores de pantalla, contraste). | Párrafos 2.4.2 y 2.4.3 |
+| **Interfaz web responsiva** | Interfaz adaptada a cualquier pantalla basada en estándares abiertos (HTML5, CSS, ECMAScript) que evita la instalación de aplicaciones nativas. | Párrafo 2.5.1 |
+| **Trazabilidad** | Vinculación formal y obligatoria que relaciona cada requisito del catálogo con el párrafo exacto del acta que motivó su creación. | Sección 4 |
+
 
 ## 10. Modelos de análisis
 
