@@ -223,45 +223,108 @@ Los apartados 6.1 y 6.2 corresponden a las descripciones detalladas de UC-05 y U
 
 ### 6.1 Descripción detallada UC-05 — Actualizar perfil
 
-**Identificador y nombre del caso de uso:** [Indica el caso.]
+**Identificador y nombre del caso de uso:** Actualizar perfil.
 
-**Objetivo:** [Explica qué resultado pretende obtener el participante.]
+**Objetivo:** La persona usuaria registrada desea consultar y actualizar los datos de su perfil (nombre completo, teléfono, dirección postal y preferencias dietéticas) y conservar los cambios realizados.
 
-**Participantes:** [Indica el actor principal y los actores de apoyo, si los hay.]
+**Participantes:** Usuario registrado
 
-**Precondiciones:** [Indica qué se da por cumplido al comenzar. Las comprobaciones que realiza el sistema pertenecen al flujo.]
+**Precondiciones:** 
+- La persona usuaria debe estar previamente registrada
+- La persona usuario debe haber regishaber iniciado sesión
 
-**Inicio:** [Indica qué acción o suceso inicia el caso.]
+**Inicio:** La persona usuaria selecciona la opción de actualizar perfil en el sistema.
 
-**Escenario principal de éxito:** [Describe la secuencia entre los participantes y el sistema.]
+**Escenario principal de éxito:** 
+1. El usuario solicita modificar su perfil.
+2. El sistema muestra los datos del usuario incluyendo el alias y el correo como atributos de solo consulta y los demás datos editables.
+3. El usuario modifica los datos deseados
+4. El usuario selecciona guardar los cambios.
+5. El sistema valida que los campos obligatorios no estén vacíos ni formados por solo espacios y que los telefonos
+6. El sistema guarda conjuntamente los datos en el perfil
+7. El sistema confirma la actualización
+8. El caso de uso finaliza
 
-**Extensiones (flujos alternativos):** [Vincula cada variación a un paso. Indica cómo continúa o termina.]
+**Extensiones (flujos alternativos):**
 
-**Postcondiciones:** [Indica qué queda establecido con éxito y qué se conserva o cambia si el caso termina sin éxito o se cancela. Una consulta no requiere modificar datos para alcanzar su objetivo.]
+5. a.1. El sistema identifica el o los campos erróneos, explica qué debe corregirse, conserva los valores introducidos y no guarda ningún cambio.
 
-**Reglas y NFR pertinentes:** [Remite a los requisitos y actas que condicionan el comportamiento.]
+   a.2. La persona usuaria corrige los datos y vuelve a solicitar el guardado (retorna al paso 3 del flujo principal).
+
+6. a.1. El sistema detecta un problema técnico que impide guardar la información.
+   
+   a.2. El sistema informa del problema, no confirma la actualización, conserva los valores introducidos para que la persona pueda reintentar el guardado, y deja los datos guardados previamente sin cambios.
+
+**Postcondiciones:** 
+- Si el caso termina con éxito: Quedan guardados y actualizados los nuevos valores de nombre completo, teléfono, dirección postal y preferencias dietéticas en el perfil de la persona usuaria.
+- Si se cancela o falla: Los datos guardados en el sistema permanecen inalterados respecto al estado inicial.
+
+
+
+**Reglas y NFR pertinentes:** 
+- UR-03 y FR-019: Actualización de información personal y preferencias; exclusión del alias y del correo electrónico (no modificables).
+- Acta general de captura (apartado 1.1): Datos obligatorios (nombre completo y teléfono) y opcionales (dirección postal y preferencias).
+- Acta de UR-01 (apartado 2.1): Teléfono obligatorio y admisión de prefijos internacionales.
+- Las preferencias dietéticas no son datos de salud ni sustituyen el registro de alergias.
 
 **Preguntas abiertas:** [Registra solo las cuestiones necesarias que las fuentes no resuelvan. Si no hay preguntas para el alcance descrito, indícalo.]
 
 ### 6.2 Descripción detallada UC-21 — Buscar recetas
 
-**Identificador y nombre del caso de uso:** [Indica el caso.]
+**Identificador y nombre del caso de uso:** UC-21 — Buscar recetas.
 
-**Objetivo:** [Explica qué resultado pretende obtener el participante.]
+**Objetivo:** Localizar una receta publicada y validada que cumpla con los criterios seleccionados por la persona usuaria y consultar su detalle.
 
-**Participantes:** [Indica el actor principal y los actores de apoyo, si los hay.]
+**Participantes:** Persona usuaria registrada. 
 
-**Precondiciones:** [Indica qué se da por cumplido al comenzar. Las comprobaciones que realiza el sistema pertenecen al flujo.]
+**Precondiciones:** 
+- La persona usuaria cuenta con una sesión iniciada en el sistema.
+- Los datos de ingredientes y recetas se encuentran disponibles en el catálogo.
 
-**Inicio:** [Indica qué acción o suceso inicia el caso.]
+**Inicio:** La persona usuaria accede a la funcionalidad de búsqueda de recetas del sistema.
 
-**Escenario principal de éxito:** [Describe la secuencia entre los participantes y el sistema.]
+**Escenario principal de éxito:**
+1. La persona usuaria introduce o selecciona los criterios de búsqueda (ingredientes a incluir, ingredientes a excluir, y/o texto en el título o descripción breve). Debe indicar al menos un criterio.
+2. La persona usuaria ejecuta la búsqueda.
+3. El sistema comprueba que no existen conflictos (por ejemplo, el mismo ingrediente seleccionado para incluir y excluir simultáneamente).
+4. El sistema filtra las recetas considerando únicamente aquellas publicadas, validadas y que cumplen estrictamente con todos los criterios indicados (inclusión, exclusión y texto).
+5. El sistema muestra los resultados ordenados por fecha de publicación (las más recientes primero). Cada vista previa incluye título, imagen (o «Sin imagen»), calificación promedio (o «Sin valoraciones») y descripción breve.
+6. La persona usuaria selecciona una de las recetas de los resultados para consultar su detalle.
+7. El sistema muestra el detalle de la receta (título, imagen si existe, ingredientes, instrucciones de preparación, tiempo de cocción, número de porciones, alias de quien la publicó e insignia de validación).
+8. La persona usuaria pulsa para volver a los resultados, conservando los criterios y el orden de la última búsqueda.
 
-**Extensiones (flujos alternativos):** [Vincula cada variación a un paso. Indica cómo continúa o termina.]
+**Extensiones (flujos alternativos):**
+1a. Ausencia de criterios de búsqueda
 
-**Postcondiciones:** [Indica qué queda establecido con éxito y qué se conserva o cambia si el caso termina sin éxito o se cancela. Una consulta no requiere modificar datos para alcanzar su objetivo.]
+1a.1. La persona usuaria intenta buscar sin indicar ningún criterio.
 
-**Reglas y NFR pertinentes:** [Remite a los requisitos y actas que condicionan el comportamiento.]
+1a.2. El sistema solicita al menos un criterio y conserva la búsqueda sin ejecutar.
+
+3a. Conflicto por ingredientes
+
+(El mismo ingrediente está seleccionado para incluir y excluir)
+
+3a.1. El sistema señala el conflicto y no ejecuta la búsqueda.
+
+3a.2. La persona usuaria corrige la selección y puede volver a ejecutar la búsqueda (retorna al paso 2).
+
+4a. Búsqueda sin resultados
+
+(Ninguna receta cumple los criterios)
+
+4a.1. El sistema indica que no hay resultados para esa búsqueda y conserva los criterios.
+
+4a.2. Si el texto admite corrección ortográfica o dispone de alternativas relacionadas (conservando los ingredientes excluidos), el sistema las propone por separado de los resultados.
+
+4a.3. La persona usuaria puede aceptar una sugerencia/corrección (viendo los criterios propuestos y decidiendo si ejecuta la nueva búsqueda) o modificar los criterios por su cuenta.
+
+**Postcondiciones:** 
+- Se presenta a la persona usuaria el detalle de la receta seleccionada o los resultados de la búsqueda.
+- Los criterios de la última búsqueda se conservan. Al tratarse de una consulta, no se requiere modificar datos para alcanzar su objetivo.
+
+**Reglas y NFR pertinentes:** 
+- Basado en el Catálogo canónico de requisitos: UR-08; FR-085, FR-086, FR-087, FR-089, FR-099, FR-102, FR-119, FR-056, FR-066 y FR-192.
+- Concreciones aprobadas en el acta para L06 (coincidencia de texto, visibilidad de recetas validadas, orden por fecha, manejo de conflictos, sugerencias sin resultados y gestión de fallos).
 
 **Preguntas abiertas:** [Registra solo las cuestiones necesarias que las fuentes no resuelvan. Si no hay preguntas para el alcance descrito, indícalo.]
 
