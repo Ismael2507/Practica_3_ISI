@@ -25,45 +25,45 @@ Como [rol], quiero [capacidad amplia], para [beneficio].
 
 ## US-01
 
-**Título:** [Capacidad]
+**Título:** Buscar por ingredientes incluidos
 
-Como [rol], quiero [capacidad], para [beneficio].
+Como usuario registrado, quiero poder buscar recetas en a partir de sus ingredientes, para poder seleccionar aquellas recetas que cuenten con los ingredientes de mi preferencia.
 
 **Fuentes:** UR-08; UC-21; [FR principal]; acta, [apartado pertinente].
 
 ### Criterios de aceptación
 
-- **CA-01.** Dado [situación], cuando [acción], entonces [resultado observable].
-- **CA-02.** Dado [situación], cuando [acción], entonces [resultado observable].
+- **CA-01.** Dado que existe una receta que tenga todos los ingredientes seleccionados, cuando la persona usuaria introduce una serie de ingredientes, entonces el sistema muestra todas aquellas recetas que contengan todos los ingredientes indicados.
+- **CA-02.** Dado que existe una receta que tiene la mayor parte de los ingredientes seleccionados, cuando [acción], entonces entonces.
 - **CA-03.** Dado [situación], cuando [acción], entonces [resultado observable].
 
 ## US-02
 
-**Título:** [Capacidad]
+**Título:** Buscar por in
 
-Como [rol], quiero [capacidad], para [beneficio].
+Como , quiero, para.
 
 **Fuentes:** UR-08; UC-21; [FR principal]; acta, [apartado pertinente].
 
 ### Criterios de aceptación
 
-- **CA-01.** Dado [situación], cuando [acción], entonces [resultado observable].
-- **CA-02.** Dado [situación], cuando [acción], entonces [resultado observable].
-- **CA-03.** Dado [situación], cuando [acción], entonces [resultado observable].
+- **CA-01.** 
+- **CA-02.** 
+- **CA-03.** 
 
 ## US-03
 
-**Título:** [Capacidad]
+**Título:** Buscar mediante una palabra o frase.
 
-Como [rol], quiero [capacidad], para [beneficio].
+Como usuario registrado, quiero poder buscar una receta mediante una palabra o frase, para poder visualizar recetas según mis preferencias.
 
-**Fuentes:** UR-08; UC-21; [FR principal]; acta, [apartado pertinente].
+**Fuentes:** UR-08; UC-21; FR-102; acta, 2.
 
 ### Criterios de aceptación
 
-- **CA-01.** Dado [situación], cuando [acción], entonces [resultado observable].
-- **CA-02.** Dado [situación], cuando [acción], entonces [resultado observable].
-- **CA-03.** Dado [situación], cuando [acción], entonces [resultado observable].
+- **CA-01.** Dado que existe una receta validada con el título "Tarta de Limón", cuando la persona usuaria introduce "tarta de limon" en el buscador, entonces el sistema muestra la vista previa de esa receta en los resultados, ignorando el uso de minúsculas y la ausencia de tildes.
+- **CA-02.** Dado que una receta validada incluye en su descripción breve el texto "estilo tradicional casero", cuando la persona usuaria busca esa frase exacta, entonces el sistema la incluye en los resultados al identificar las palabras seguidas y en el mismo orden.
+- **CA-03.** Dado que ninguna receta del sistema contiene la palabra "zahanoria", cuando la persona usuaria ejecuta la búsqueda con ese término, entonces el sistema indica que no hay resultados, conserva el texto buscado en el campo y propone la corrección ortográfica "zanahoria" sin ejecutar una nueva búsqueda automáticamente.
 
 ## Revisión INVEST
 
